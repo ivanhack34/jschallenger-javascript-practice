@@ -114,4 +114,61 @@ console.log(myFunction('1234'));
 console.log(myFunction('fgedcba'));
 */
 
+//TODO: Challenger part 4
+
 //?11-Write a function that takes two numbers (a and b) as argument. Return b percent of a
+
+/*
+function myFunction(a, b) {
+  return b / 100 * a //This returns the division of b by 100 and will be multiplied by a to get the percentage
+}
+
+console.log(myFunction(100,50));
+console.log(myFunction(10,1));
+console.log(myFunction(500,25));
+*/
+
+//?12-Write a function that takes 6 values (a,b,c,d,e,f) as arguments. Sum a and b. Then substract by c. Then multiply by d and divide by e. Finally raise to the power of f and return the result. Tipp: mind the order.
+
+/*
+function myFunction(a, b, c, d, e, f) {
+  return Math.pow(((a + b - c) * d) / e, f); 
+  //We use Math.pow to raise it to f and inside the parentheses. 
+  //First add to + b and then subtract by c. 
+  //Then the outer parentheses multiply it by d. Where this divides it by e and makes the exponent of f.
+}
+
+console.log(myFunction(6,5,4,3,2,1));
+console.log(myFunction(6,2,1,4,2,3));
+console.log(myFunction(2,3,6,4,2,3));
+*/
+
+//?13-Write a function that takes two strings (a and b) as arguments. If a contains b, append b to the beginning of a. If not, append it to the end. Return the concatenation
+
+/*
+function myFunction(a, b) {
+  if (a.includes(b)) {
+    return b + a;
+  } else {
+    return a + b;
+  }
+  //This what will do if a is included in b. So it will return b + a or a + b depending on the variables you want to bind to.
+}*/
+
+//or
+
+/*
+function myFunction(a, b) {
+  return a.indexOf(b) === -1 ? a + b : b + a //Return with indexOf() the first position of b in a so that if it is strictly equal to -1 
+                                             //then it will be a+b and if not, it will be b + a in ternary form.
+}
+
+console.log(myFunction('cheese', 'cake'));
+console.log(myFunction('lips', 's'));
+console.log(myFunction('Java', 'script'));
+console.log(myFunction(' think, therefore I am', 'I'));
+*/
+
+//?14-Write a function that takes a number as argument. If the number is even, return true. Otherwise, return false
+
+
