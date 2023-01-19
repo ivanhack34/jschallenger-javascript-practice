@@ -169,6 +169,113 @@ console.log(myFunction('Java', 'script'));
 console.log(myFunction(' think, therefore I am', 'I'));
 */
 
+//TODO: Challenger part 5
+
 //?14-Write a function that takes a number as argument. If the number is even, return true. Otherwise, return false
 
+/*
+function myFunction(num) {
+  return num % 2 === 0; //This code is to see if the number is even or odd, of which if it gives true or if it gives false.
+}
 
+console.log(myFunction(10));
+console.log(myFunction(-4));
+console.log(myFunction(5));
+console.log(myFunction(-111));
+*/
+
+//?15-Write a function that takes two strings (a and b) as arguments. Return the number of times a occurs in b.
+
+/*
+function myFunction(a, b) {
+  return b.split(a).length - 1; //What will make it search with b will separate the letters that are repeated from a for each word - 1 and will show how many times that word is repeated in the sentence.
+}
+
+console.log(myFunction('m', 'how many times does the character occur in this sentence?'));
+console.log(myFunction('h', 'how many times does the character occur in this sentence?'));
+console.log(myFunction('?', 'how many times does the character occur in this sentence?'));
+console.log(myFunction('z', 'how many times does the character occur in this sentence?'));
+*/
+
+//?16-Write a function that takes a number (a) as argument. If a is a whole number (has no decimal place), return true. Otherwise, return false.
+
+
+
+/* 
+function myFunction(a) {
+  return Number.isInteger(a); //This is what will make it show a number value, with isInteger it shows if it is an integer it is true and if it is decimal it is false.
+}
+*/
+
+//!Otra forma
+
+/*
+function myFunction(a) {
+  return a - Math.floor(a) === 0 //This code is in charge of showing with the value a - the value in decimal to see if it is strictly equal to decimal or integer
+}
+*/
+
+//!Otra forma
+
+/*
+function myFunction(a) {
+  return a % 1 === 0; //In this case, it will search for numbers that are divided by 0 or 1.
+}
+*/
+
+/*
+console.log(myFunction(4))
+console.log(myFunction(1.123))
+console.log(myFunction(1048))
+console.log(myFunction(10.78))
+*/
+
+//?17-Write a function that takes two numbers (a and b) as arguments. If a is smaller than b, divide a by b. Otherwise, multiply both numbers. Return the resulting value
+/*
+function myFunction(a, b) {
+  if (a < b) {
+    return a / b;
+  } else {
+    return a * b;
+  }
+  //A conditional is created that if a is less than b then it is divided and if not it is multiplied.
+}
+*/
+
+//! Otra forma
+
+/*
+function myFunction(a, b) {
+  return a < b ? a / b : a * b //The same as the previous example but in ternary.
+}
+
+console.log(myFunction(10, 100));
+console.log(myFunction(90, 45));
+console.log(myFunction(8, 20));
+console.log(myFunction(2, 0.5));
+*/
+
+//?18-Write a function that takes a number (a) as argument. Round a to the 2nd digit after the decimal point. Return the rounded number
+/*
+function myFunction(a) {
+  return Math.round(a * 100) / 100; //Which will make it round the number by 100 and then divide it by 100 to find the decimal up to its second digit
+}
+*/
+
+//!Other form
+
+/*
+function myFunction(a) {
+  //return a.toFixed(2); //What will make it look for the number of the decimal but in its second digit.
+  //or
+  return Number(a.toFixed(2)); //The same as the previous one but at the beginning specifying the value of number.
+}
+
+
+console.log(myFunction(2.12397))
+console.log(myFunction(3.136))
+console.log(myFunction(1.12397))
+console.log(myFunction(26.1379))
+*/
+
+//?19-Write a function that takes a number (a) as argument. Split a into its individual digits and return them in an array. Tipp: you might want to change the type of the number for the splitting
