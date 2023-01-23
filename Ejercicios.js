@@ -278,4 +278,91 @@ console.log(myFunction(1.12397))
 console.log(myFunction(26.1379))
 */
 
+//TODO: Challenger part 6
+
 //?19-Write a function that takes a number (a) as argument. Split a into its individual digits and return them in an array. Tipp: you might want to change the type of the number for the splitting
+
+/*
+function myFunction(a) {
+  // we use the split method to divide the number into an array of characters
+  let digitos = a.toString().split("");
+  // we use the map method to convert each character into a number
+  return digitos.map(function(digito) {
+    return parseInt(digito);
+  });
+}
+*/
+
+//Another form
+
+/*
+function myFunction( a ) {
+  const string = a + ''; //First look for the value of the parameter a + the blank space
+  const strings = string.split(''); //Then with the split it will divide each space that it has within that array, that is, by each of its values.
+  return strings.map(digit => Number(digit)) 
+  //What it will do with the map is that it traverses with the arrow function. Each string value, to convert it into a number.
+}
+
+
+console.log(myFunction(10));
+console.log(myFunction(931));
+console.log(myFunction(193278));
+*/
+
+//?20-Write a function that takes an array (a) as argument. Remove the first 3 elements of 'a'. Return the result
+
+/*
+function myFunction(a) {
+  // use the splice() method to remove the first 3 elements
+  a.splice(0, 3);
+  // return the modified array
+  return a;
+}
+*/
+
+//Another form
+
+/*
+function myFunction(a) {
+  return a.slice(3); //We use slice to remove the first 3 elements of the function.
+}
+
+
+console.log(myFunction([1,2,3,4]));
+console.log(myFunction([5,4,3,2,1,0]));
+console.log(myFunction([99,1,1]));
+*/
+
+//?21-Write a function that takes two arrays as arguments. Merge both arrays and remove duplicate values. Sort the merge result in ascending order. Return the resulting array
+
+/*
+function myFunction(a, b) {
+  // merge the two arrays
+  let merged = a.concat(b);
+  // remove duplicate values
+  let unique = Array.from(new Set(merged));
+  // sort the array in ascending order
+  unique.sort((a, b) => a - b);
+  // return the resulting array
+  return unique;
+}
+*/
+
+//Other form
+
+/*
+function myFunction(a, b) {
+  return [...new Set([...a, ...b])].sort((x, y) => x - y);
+}
+//The function takes two arrays "a" and "b", combines it, 
+//removes duplicate values and sorts them in ascending order, finally returns the resulting array.
+
+
+console.log(myFunction([1, 2, 3], [3, 4, 5]));
+console.log(myFunction([-10, 22, 333, 42], [-11, 5, 22, 41, 42]));
+*/
+
+//?22-Write a function that takes an array of objects as argument. Sort the array by property b in ascending order. Return the sorted array
+
+
+
