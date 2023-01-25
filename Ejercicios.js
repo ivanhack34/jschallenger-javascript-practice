@@ -362,7 +362,85 @@ console.log(myFunction([1, 2, 3], [3, 4, 5]));
 console.log(myFunction([-10, 22, 333, 42], [-11, 5, 22, 41, 42]));
 */
 
+//TODO: Challenger part 7
+
 //?22-Write a function that takes an array of objects as argument. Sort the array by property b in ascending order. Return the sorted array
+
+/*
+function myFunction(arr) {
+  return arr.sort(function(a, b) {
+    return a.b - b.b;
+  });
+}
+*/
+
+//?23-Write a function that takes an array (a) and a number (n) as arguments. It should return the last n elements of a.
+
+/*
+function myFunction(a, n) {
+  return a.slice(-n); //What it will do is look for the arguments of n, that is, in this case it will look for the last number after the array.
+}
+
+console.log(myFunction([1, 2, 3, 4, 5], 2));
+console.log(myFunction([1, 2, 3], 6));
+console.log(myFunction([1, 2, 3, 4, 5, 6, 7, 8], 3));
+*/
+
+
+//?24-Write a function that takes an array (a) and a value (b) as argument. The function should remove all elements equal to 'b' from the array. Return the filtered array.
+
+/*
+function myFunction(a, b) {
+  return a.filter(function(x) {
+      return x !== b; //What will make arrays of the contents of b is used the filter() to be able to eliminate all those that are equal from b in a. 
+                      //But for those that are not the same, they will go to a new arrangement.
+  });
+}
+*/
+
+//Other form
+
+/*
+function myFunction( a, b ) {
+  return a.filter(cur => cur !== b) //It does the same as the previous example, only it is more simplified. With the function arrow, 
+                                    //where will return the filtered array of the elements that are not equal to b.
+}
+
+
+console.log(myFunction([1,2,3], 2))
+console.log(myFunction([1,2,'2'], '2'))
+console.log(myFunction([false,'2',1], false))
+console.log(myFunction([1,2,'2',1], 1))
+*/
+
+//?25-Write a function that takes an array of numbers as argument. Return the number of negative values in the array.
+
+/*
+function myFunction(a) {
+  return a.filter(function(x) {
+      return x < 0;
+  }).length;
+  //This function is called from filter() to filter out arrays that are negative. In this case they are less than 0.
+}
+*/
+
+//Other Form
+
+/*
+function myFunction(a) {
+  return a.filter((el) => el < 0).length;
+  //The same as in the previous example, only using the arrow function to simplify and make the return call faster.
+}
+
+
+console.log(myFunction([1,-2,2,-4]));
+console.log(myFunction([0,9,1]));
+console.log(myFunction([4,-3,2,1,0]));
+*/
+
+//?26-Write a function that takes an array of numbers as argument. It should return an array with the numbers sorted in descending order.
+
+
 
 
 
